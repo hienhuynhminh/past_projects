@@ -1,5 +1,5 @@
 # Data Integration into Shopify
-
+*This demo was part of a project I carried out during my internship in 2022.*
 
 ## Project Descriptions
 * The company where I did my data engineering internship, NADUVI, is an e-commerce business and advertises home and living (i.e. furniture) products on their webshop. They build their e-commerce platform on Shopify.
