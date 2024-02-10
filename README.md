@@ -20,7 +20,8 @@
 
 ## Python Scripts
 ### Script 1: ```shopify_metafield_functions.py```
-* This script contains the main function to compare the current lists of recommendations with the newly generated lists of recommendations, two functions to make API calls to Shopify (one to create new metafields, and another to update existing metafields), as well as some supporting functions.
+This script contains several functions:
+* The main function called ```create_requests``` that tracks changes in metafields. There are two possibilities, namely (new) products 
 
 ### Script 2: ```upsell_recommendations_to_shopify.py```
 * This script was written to apply the functions in Script 1. Here, the parameters for these functions are provided, for example, table names for new and current lists of recommendations in Google BigQuery, or API keys/passes to interact with Shopify.
