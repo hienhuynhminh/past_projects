@@ -2,7 +2,7 @@
 Keywords:
 * data manipulation (```pandas```)
 * Google Cloud Platform, Google BigQuery
-* API
+* API, Shopify metafields
 * orchestration with Airflow
 
 
