@@ -1,5 +1,10 @@
 # Data Integration into Shopify
-*This project demo was part of the data engineering internship I did in 2022.*
+*This project demo was part of the data engineering internship I did in 2022.*\
+Keywords:
+* data manipulation (```pandas```)
+* Google Cloud Platform, Google BigQuery
+* API
+* orchestration with Airflow
 
 ## Project Descriptions
 * The company where I did my data engineering internship, NADUVI, is an e-commerce business and advertises home and living (i.e. furniture) products on their webshop. They build their e-commerce platform on Shopify.
