@@ -1,5 +1,5 @@
 # Data Integration into Shopify
-*This demo was part of a project I carried out during my internship in 2022.*
+*This project demo was part of the data engineering internship I did in 2022.*
 
 ## Project Descriptions
 * The company where I did my data engineering internship, NADUVI, is an e-commerce business and advertises home and living (i.e. furniture) products on their webshop. They build their e-commerce platform on Shopify.
@@ -20,11 +20,13 @@
 
 ## Python Scripts
 ### Script 1: ```shopify_metafield_functions.py```
-This script contains several functions:
-* The main function called ```create_requests``` that tracks changes in metafields. There are two possibilities, namely (new) products 
+Script 1 contains a collection of functions:
+* The main function is called ```create_requests```. It takes the table that stores current product information (i.e. current Shopify metafields) to compare with new product information (which has been generated in a separate step and stored in the ```df_tocompare``` dataframe). As a result, the function outputs two new dataframes. The first dataframe stores products which currently do not have the target metafields yet. The other dataframe stores products which currently have the target metafields, but the values in these metafields should be updated according to ```df_tocompare```.
+* Two functions ```create_metafield``` and ```update_metafield``` generate API calls to either create or update metafields to products on Shopify.
+* Other functions are support functions which serve data processing, cleaning, manipulation etc. purposes.
 
 ### Script 2: ```upsell_recommendations_to_shopify.py```
-* This script was written to apply the functions in Script 1. Here, the parameters for these functions are provided, for example, table names for new and current lists of recommendations in Google BigQuery, or API keys/passes to interact with Shopify.
+Script 2 takes the functions which were created in Script 1 (i.e. ```shopify_metafield_functions.py```) and generates a pipeline to integrate upselling recommendations into Shopify. Information specific to upselling recommendations (i.e. table names and columns in Google BigQuery, metafield namespaces and API keys and passes in Shopify) is detailed and provided to the functions from Script 1.
 
 ### Script 3: ```upselling_metafields_dag.py```
-* In this script, a DAG is created to trigger Airflow to automate the process in Script 2.
+After the pipeline has been created in the previous script, Script 3 contains an Airflow DAG which schedules the pipeline to be executed automatically. Here, the cron expression ```0 0 * * 1``` states that the pipeline would be executed every Monday at 00:00. Moreover, the DAG is split into several "languages" (i.e. in a ```for``` loop) because the company operates in two domains .nl & .de.
