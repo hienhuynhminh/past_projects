@@ -1,5 +1,5 @@
 # Data Integration into Shopify
-*This project demo was part of the data engineering internship I did in 2022.*\
+*This project demo was part of the data engineering internship I did in 2022.*\\
 Keywords:
 * data manipulation (```pandas```)
 * Google Cloud Platform, Google BigQuery
