@@ -1,10 +1,10 @@
 # Data Integration into Shopify
-*This project demo was part of the data engineering internship I did in 2022.*\\
 Keywords:
 * data manipulation (```pandas```)
 * Google Cloud Platform, Google BigQuery
 * API
 * orchestration with Airflow
+
 
 ## Project Descriptions
 * The company where I did my data engineering internship, NADUVI, is an e-commerce business and advertises home and living (i.e. furniture) products on their webshop. They build their e-commerce platform on Shopify.
@@ -35,3 +35,6 @@ Script 2 takes the functions which were created in Script 1 (i.e. ```shopify_met
 
 ### Script 3: ```upselling_metafields_dag.py```
 After the pipeline has been created in the previous script, Script 3 contains an Airflow DAG which schedules the pipeline to be executed automatically. Here, the cron expression ```0 0 * * 1``` states that the pipeline would be executed every Monday at 00:00. Moreover, the DAG is split into several "languages" (i.e. in a ```for``` loop) because the company operates in two domains .nl & .de.
+
+##
+*This project demo was part of the data engineering internship I did in 2022.*
