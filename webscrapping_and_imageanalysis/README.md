@@ -20,4 +20,5 @@
   7. text
   8. rating (i.e. points given by the reviewer)
   9. photo url (link to the photo posted in the review, e.g. [https://media-cdn.tripadvisor.com/media/photo-s/1a/2c/55/35/cafe-bedier.jpg](https://media-cdn.tripadvisor.com/media/photo-s/1a/2c/55/35/cafe-bedier.jpg))
-* For both Script 1 and Script 2, 
+* For both Script 1 and Script 2, web scraping was performed by using the package ```Selenium``` in Python.
+
