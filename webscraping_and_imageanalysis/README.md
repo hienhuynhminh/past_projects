@@ -4,7 +4,7 @@
 * For the master's thesis I wrote in 2023, I asked a research question about user-generated content, specifically about review photos. When a reviewer writes about his/her experience at a restaurant and post it on platforms like TripAdvisor, he/she might attach several images (i.e. review photos). In this demo, I show how I performed web scraping to gather the restaurant reviews, including review photographs, with Python in order to obtain the data for my research.
 * Once I gathered the review photos, in a following step, I performed several image analyses to extract *photographic attributes* from the images, for example, brightness, contrast, colorfulness etc.
 
-## Workflow Summary
+## Python Scripts
 ### Script 1: ```ScrapeRestaurants.py```
 * On TripAdvisor, a destination (city) is selected, e.g. [Amsterdam](https://www.tripadvisor.com/Restaurants-g188590-Amsterdam_North_Holland_Province.html). On this URL about restaurants in Amsterdam, a list of restaurant suggestions is given. For each restaurant, I scrap its name, category (either cheap eats, mid-range or fine dining) and the URL to the restaurant's own page on TripAdvisor. Eventually, all of this data is saved in a csv file.
 
@@ -22,5 +22,5 @@
   9. photo url (link to the photo posted in the review, e.g. [https://media-cdn.tripadvisor.com/media/photo-s/1a/2c/55/35/cafe-bedier.jpg](https://media-cdn.tripadvisor.com/media/photo-s/1a/2c/55/35/cafe-bedier.jpg))
 * For both Script 1 and Script 2, web scraping was performed by using the package ```Selenium``` in Python.
 
-### Script 3: 
-
+### Script 3: ```PhotographicAttributes.py```
+* The third script in this demo contains several functions to compute different photographic attributes from a given image. These computations were based on previous research, and for more details, refer to Section 5.2 of my thesis (```M.H. Huynh - Thesis.pdf```).
