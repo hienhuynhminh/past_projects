@@ -22,5 +22,5 @@
   9. photo url (link to the photo posted in the review, e.g. [https://media-cdn.tripadvisor.com/media/photo-s/1a/2c/55/35/cafe-bedier.jpg](https://media-cdn.tripadvisor.com/media/photo-s/1a/2c/55/35/cafe-bedier.jpg))
 * For both Script 1 and Script 2, web scraping was performed by using the package ```Selenium``` in Python.
 
-### Script 3: 
-
+### Script 3: ```PhotographicAttributes.py```
+* The third script in this demo contains several functions to compute different photographic attributes from a given image. These computations were based on previous research, and for more details, refer to Section 5.2 of my thesis (```M.H. Huynh - Thesis.pdf```).
